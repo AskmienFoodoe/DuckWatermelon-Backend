@@ -15,6 +15,9 @@ api = Api(app)
 # def create_tables():
 #     db.create_all()
 
+@app.route("/")
+def home():
+    return "Hello World"
 
 api.add_resource(Score, '/scores')
 
