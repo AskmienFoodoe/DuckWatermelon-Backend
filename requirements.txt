@@ -4,3 +4,4 @@ Flask-SQLAlchemy
 uwsgi
 Flask-JWT
 Flask-CORS
+psycopg2
