@@ -22,6 +22,10 @@ class ScoreModel(db.Model):
     def find_by_tag(cls, tag):
         return cls.query.filter_by(tag=tag).first()
 
+    @classmethod
+    def return_all(cls):
+        return cls.query.all()
+        
     def save_to_db(self):
         db.session.add(self)
         db.session.commit()

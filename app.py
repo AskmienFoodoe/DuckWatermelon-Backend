@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-
+from flask_cors import CORS
 from resources.score import Score
 
 app = Flask(__name__)
@@ -9,6 +9,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
 api = Api(app)
+CORS(app)
 
 
 # @app.before_first_request
