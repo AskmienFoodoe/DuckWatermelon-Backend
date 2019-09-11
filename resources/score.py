@@ -44,7 +44,3 @@ class Score(Resource):
             score.delete_from_db()
             return {'message': 'score deleted.'}
         return {'message': 'score not found.'}, 404
-
-class ScoreList(Resource):
-
-    def get(self)
